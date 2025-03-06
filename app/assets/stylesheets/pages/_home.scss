@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+
+.hero {
+  background-image: url(asset-path("hero_banner.jpg"));
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 200px 0;
+}
