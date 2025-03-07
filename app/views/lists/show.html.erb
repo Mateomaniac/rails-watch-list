@@ -1,5 +1,5 @@
 <!-- Banner -->
-<section class="hero position-relative text-center text-white"">
+<section class="hero position-relative text-center text-white">
 </section>
 
 <!-- movies cards -->
@@ -10,7 +10,7 @@
     <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
       <div class="col-4">
         <div class="card">
-          <%= image_tag movie.poster_url, alt: "placeholder", class: "card-img-top" %>
+          <%= image_tag movie.poster_url, alt: "#{movie.title}", class: "card-img-top" %>
           <div class="card-body">
             <h5 class="card-title"><%= movie.title %></h5>
             <p class="card-text"><%= movie.overview %></p>
