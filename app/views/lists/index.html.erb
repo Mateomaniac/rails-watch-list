@@ -5,17 +5,19 @@
 <!-- Cards -->
 <div class="container">
 <h1 class="my-4">My movies lists</h1>
-  <div class="row mb-4">
+  <div class="row g-2">
     <%  @lists.each do |list|%>
-      <div class="card m-2 col-4" style="width: 18rem;">
+    <div class="col-4">
+      <div class="card">
         <%= image_tag "placeholder.png", alt: "placeholder", class: "card-img-top" %>
         <div class="card-body">
           <h5 class="card-text"><%= link_to list.name, list_path(list) %></h5>
         </div>
       </div>
+    </div>
     <% end %>
   </div>
-  <div class="row mt-4">
-    <div class="text-center"><%= link_to 'New list', new_list_path, class: "btn btn-dark btn-lg"%></div>
+  <div class="row justify-content-center my-4">
+    <div class="col-3 text-center"><%= link_to 'New list', new_list_path, class: "btn btn-dark btn-lg"%></div>
   </div>
 </div>
