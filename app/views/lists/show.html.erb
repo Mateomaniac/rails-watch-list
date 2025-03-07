@@ -15,6 +15,11 @@
             <h5 class="card-title"><%= movie.title %></h5>
             <p class="card-text"><%= movie.overview %></p>
             <p class="card-text"><small class="text-muted"><%= bookmark.comment %></small></p>
+            <p>
+            <%= link_to 'Remove from list', list_bookmark_path(@list, bookmark),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+            class: "btn btn-dark btn-lg w-100"%>
+            </p>
           </div>
         </div>
       </div>
